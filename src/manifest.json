@@ -1,0 +1,30 @@
+{
+  "name": "chromevj",
+  "description": "VJ effects for video sites like youtube/twitch",
+  "version": null,
+  "manifest_version": 2,
+  "icons": {
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "chromevj",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "chrome_style": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitch.tv/*", "*://*.youtube.com/*", "*://.netflix.com/*", "*://google.com/*", "*://*.google.com/*", "*://.example.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "permissions": ["https://*/", "storage", "activeTab"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

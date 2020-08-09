@@ -1,0 +1,49 @@
+#chromevj {
+}
+
+.chromevj-controls {
+  position: absolute;
+  z-index: 99999;
+
+  background-color: #000;
+}
+
+.chromevj-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+
+  /* background-color: red; */
+  /*   animation-name: example; */
+  /*   animation-duration: 0; */
+}
+
+.box {
+  background-color: #002233;
+}
+
+.child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.leaving {
+  opacity: 0;
+  /* animation-name: fadeOut; */
+  /*   animation-duration: 1s; */
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
